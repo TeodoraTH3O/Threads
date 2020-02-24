@@ -2,10 +2,8 @@ package main.java.filozofi;
 
 import java.awt.*;
 
-// clasa Filozof implementează comportamentul unui concurent
 class Filozof extends Thread {
-    // părerea concurentului despre culoarea pălăriei sale.
-    // Null dacă încă nu şi-a format o părere.
+    
     Color parere = null;
 
     Filozof(String nume) {
@@ -13,9 +11,9 @@ class Filozof extends Thread {
     }
 
     public void run() {
-        // concurentii firului curent
+
         Filozof concurenti[] = new Filozof[2];
-        // temporar
+
         Thread fire[] = new Thread[10];
         int numarFire = enumerate(fire);
         for (int i = 0, j = 0; i < numarFire && j < 2; i++) {
